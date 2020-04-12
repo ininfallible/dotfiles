@@ -1,0 +1,54 @@
+# Astr's kitty config 
+# WPG BASE
+
+# font
+font_family			Source Code Pro Semibold
+bold_font			Source Code Pro Bold
+italic_font			Source Code Pro Italic
+bold_italic_font 	Source Code Pro Italic Bold
+
+# margins (mosty aesthetic)
+window_margin_width 10.0
+single_window_margin_width -1
+
+# cursor
+cursor_shape underline
+cursor_blink_interval 1.5
+cursor_stop_blinking_after 10.0
+
+# misc
+enable_audio_bell no
+editor nvim
+
+# line spacing
+adjust_line_height 5
+
+# Colors - themed around rest of OS, cool and good
+# supposed to be a refined brown/gold theme 
+foreground #f5edc1
+background {inactive}
+# Color 	(Normal, Bright)
+# Black 	(0,  8)
+color0 		{color0}
+color8 		{color8}
+# Red 		(1,  9)
+color1 		{color1}
+color9 		{color9}
+# Green 	(2, 10)
+color2 		{color2}
+color10  	{color10}
+# Yellow	(3, 11)
+color3 		{color3}
+color11 	{color11}
+# Blue		(4, 12)
+color4 		{color4}
+color12 	{color12}
+# Purple	(5, 13)
+color5		{color5}
+color13		{color13}
+# Cyan		(6, 14)
+color6		{color6}
+color14		{color14}
+# White		(7, 15)
+color7		{color7}
+color15		{color15}
