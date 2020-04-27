@@ -1,0 +1,28 @@
+{
+  "name": "brown-deco",
+  "author": "Astr",
+  "color": [
+    "#211b14",
+    "#ce4d41",
+    "#88b754",
+    "#ebbe49",
+    "#6ba3d8",
+    "#9e68ca",
+    "#59beac",
+    "#e8dda7",
+    "#403426",
+    "#eb7064",
+    "#add87d",
+    "#f6d581",
+    "#8cc0f1",
+    "#bb91de",
+    "#8ee1d2",
+    "#f5ecba"
+  ],
+  "active": "#f5edc1",
+  "foreground": "#f5edc1",
+  "inactive": "#211b14",
+  "background": "#211b14"
+}
+
+
