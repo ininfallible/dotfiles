@@ -1,0 +1,70 @@
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+#contentAreaContextMenu{ margin: 5px 0 0 5px}
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+#TabsToolbar {
+    visibility: collapse !important;
+}
+
+#sidebar-splitter {
+    visibility: collapse !important;
+}
+#sidebar-header {
+    visibility: collapse !important;
+}
+
+.sidebar-placesTree treechildren::-moz-tree-cell-text {
+  font-size: 14px !important;
+  color: #ffffff !important;
+}
+/* Pale blue background on hover or selected */
+.sidebar-placesTree treechildren::-moz-tree-row(hover),
+.sidebar-placesTree treechildren::-moz-tree-row(selected) {
+  background-color: #bdf !important;
+}
+.sidebar-placesTree treechildren::-moz-tree-row {
+    background-color: #beige !important;
+}
+
+tab-item.active {
+  border-bottom: 2px solid white;
+}
+
+tab-item:hover {
+  background-color: blue;
+}
+
+.contextual-identity-marker {
+  position: absolute !important;
+  pointer-events: none;Full Auto-show/hide Theme
+  z-index: 0;
+  
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  
+  width: unset !important;
+  height: unset !important;  
+    
+  opacity: 0.5;
+}
+
+/*
+#main-window:not([tabsintitlebar="true"])
+
+#titlebar {
+    visibility: collapse !important;
+}
+*/
+/*
+#sidebar-header {
+    visibility: collapse !important;
+}
+*/
+

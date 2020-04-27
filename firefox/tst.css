@@ -1,0 +1,56 @@
+/* 
+ * CSS for Tree Style Tabs
+ * */
+
+@keyframes throbber {}
+@keyframes blink {}
+@keyframes tab-burst-animation {}
+@keyframes tab-burst-animation-light {}
+
+:root {
+  --theme-tst-bg: #211B14;
+}
+
+/* Style each tab header */
+tab-item {
+  border: none;
+  background-color: var(--theme-colors-toolbar);
+  margin: top 2px;
+}
+
+tab-item.active  {
+  background-color: var(--theme-colors-tab_loading);
+  color: black;
+}
+
+tab-item.discarded {
+  background-color: var(--theme-tst-bg);
+  --tab-text: var(--theme-colors-tab_loading);
+}
+
+tab-item:hover {
+  background-color: var(--theme-colors-tab_line);
+}
+
+/* Style new tab button */
+.newtab-button-box {
+  background-color: none;
+  margin: 6px !important;
+}
+
+.newtab-action-selector-anchor {
+  border: none !important;
+}
+
+.newtab-button {
+  background-color: var(--theme-colors-tab_loading) !important;
+  border: none !important;
+  padding: 2px !important;
+  border-radius: 10px;
+}
+
+/* background of sidebar*/
+#tabbar {
+  background-color: var(--theme-tst-bg);
+  border: none !important;
+}
