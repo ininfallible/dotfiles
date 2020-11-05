@@ -113,4 +113,6 @@ build_prompt() {
 	prompt_dir
 	prompt_git
 }
-PROMPT='%{%f%b%k%}$(build_prompt) '
+# end snippet is for adding an newline if not enough space to the right (20 chars)
+NEWLINE=$'\n'
+PROMPT='%{%f%b%k%}$(build_prompt) %-20(l::${NEWLINE})'
