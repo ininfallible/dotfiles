@@ -60,19 +60,9 @@ signal=1
 ## SUBSCRIBE=1 requires interval=persist and always uses LONG_FORMAT
 #SUBSCRIBE=0
 
-# Network interface monitoring
-#
-# If the instance is not specified, use the interface used for default route.
-# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-[iface]
-#IFACE=wlan0
-label=IP:
-color=#ADD87D
-interval=10
-separator=false
-
 [wifi]
-label=WIFI:
+# label=WIFI:
+label=  
 INTERFACE=wlp59s0
 interval=10
 separator=false
@@ -81,13 +71,27 @@ separator=false
 # INTERFACE=eth0
 # interval=5
 
+# Network interface monitoring
+#
+# If the instance is not specified, use the interface used for default route.
+# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
+[iface]
+#IFACE=wlan0
+label=IP:
+color=#ADD87D
+# color=#8EE1D2
+interval=10
+separator=false
+
+
 
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
 separator_block_width=0
-label= MEM: 
+# label= MEM: 
+label=  
 separator=false
 interval=10
 
@@ -98,7 +102,8 @@ interval=10
 # see the script for details.
 [temperature]
 separator_block_width=0
-label= TEMP: 
+# label= TEMP: 
+label=  
 interval=10
 
 # CPU usage
@@ -106,7 +111,8 @@ interval=10
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-label= CPU: 
+# label= CPU: :
+label=  
 interval=10
 min_width=CPU 100.00%
 #separator=false
@@ -124,7 +130,7 @@ interval=10
 [time]
 command=date '+%Y-%m-%d %H:%M:%S '
 label= 
-background=#5B75D4
+background=#8CC0F1
 color=#110B04
 interval=5
 
