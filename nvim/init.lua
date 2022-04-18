@@ -36,7 +36,7 @@ require('packer').startup(function(use)
 end)
 
 --Set highlight on search
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 
 --Make line numbers default
 vim.wo.number = true
@@ -49,6 +49,17 @@ vim.o.breakindent = true
 
 --Save undo history
 vim.opt.undofile = true
+
+-- tabs are 4 spaces wide
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+
+--Column on line 80
+vim.opt.colorcolumn="81"
+vim.cmd([[hi ColorColumn ctermbg=DarkGray]])
+
+-- vim.o.cursorline = true
+-- vim.cmd([[hi CursorLine term=bold cterm=none ctermbg=DarkGray]])
 
 --Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
@@ -284,12 +295,13 @@ cmp.setup {
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-u>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
-    ['<CR>'] = cmp.mapping.confirm {
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
-    },
+    -- ['<CR>'] = cmp.mapping.confirm {
+    --   behavior = cmp.ConfirmBehavior.Replace,
+    --   select = true,
+    -- }
+    --,
     ['<Tab>'] = function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
