@@ -334,8 +334,8 @@ vim.api.nvim_set_keymap('', '<C-n>', ':CHADopen<CR>', {noremap = true, silent = 
 -- :map <C-w>t to new tab :)
 vim.keymap.set('n', '<C-w>t', ':tabnew<CR>', { noremap = true, silent = true })
 
--- :map <C-n> in terminal mode to switch to normal
-vim.keymap.set('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
+-- :map <C-w> in terminal mode to switch to normal
+vim.keymap.set('t', '<C-w>', '<C-\\><C-n>', { noremap = true})
 
 -- set both shiftwidth and tabstop for a file
 vim.api.nvim_create_user_command('Swts',
