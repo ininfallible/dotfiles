@@ -31,8 +31,10 @@ require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp'
   use 'saadparwaiz1/cmp_luasnip'
+
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'ms-jpq/chadtree' -- file explorer
+  use 'junegunn/goyo.vim' -- focus mode
 end)
 
 --Set highlight on search
@@ -297,11 +299,9 @@ cmp.setup {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-u>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
-    -- ['<CR>'] = cmp.mapping.confirm {
-    --   behavior = cmp.ConfirmBehavior.Replace,
-    --   select = true,
-    -- }
-    --,
+    ['<CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true},
     ['<Tab>'] = function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -330,3 +330,20 @@ cmp.setup {
 
 -- :map <C-n> :CHADTreeOpen<CR>
 vim.api.nvim_set_keymap('', '<C-n>', ':CHADopen<CR>', {noremap = true, silent = true})
+
+-- :map <C-w>t to new tab :)
+vim.keymap.set('n', '<C-w>t', ':tabnew<CR>', { noremap = true, silent = true })
+
+-- :map <C-n> in terminal mode to switch to normal
+vim.keymap.set('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
+
+-- set both shiftwidth and tabstop for a file
+vim.api.nvim_create_user_command('Swts',
+	function(opts)
+		vim.api.nvim_set_option('shiftwidth', tonumber(opts.args))
+		vim.api.nvim_set_option('tabstop', tonumber(opts.args))
+		vim.api.nvim_buf_set_option(0, 'shiftwidth', tonumber(opts.args))
+		vim.api.nvim_buf_set_option(0, 'tabstop', tonumber(opts.args))
+	end,
+	{nargs=1})
+
